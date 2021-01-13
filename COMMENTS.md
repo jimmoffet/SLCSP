@@ -2,7 +2,7 @@
 
 ## To run with docker
 
-Ensure that you have the Docker daemon installed. https://www.docker.com/products/docker-desktop
+Make sure you have the Docker daemon installed :) https://www.docker.com/products/docker-desktop
 
 Clone repo and run from root:
 
