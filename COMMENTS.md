@@ -21,6 +21,7 @@ Clone repo and run from root (using a virtual environment is recommended, tested
 `python run.py`
 
 Run tests (also from root, after running `pip install` above):
+
 `pytest .`
 
 ## Notes
