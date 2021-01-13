@@ -1,0 +1,43 @@
+Assume we have created a dict called benchmarks with structure:
+
+{
+zipcode(string): {
+  "rate": float or "",
+  "rate_areas_list": [int],
+  "rate_areas_set": (int),
+  "silver_rates_list": [float],
+  "silver_rates_set": (float)
+  },
+...
+}
+
+### Test for data objects and their structure first, so we can assume their use later. Include basic tests for import of csv objects, can hard-code things like row count associated with filename because underlying files will be in container and can't change
+### don't forget to concat state and rate area int!
+### don't forget to cast numerics on ingestion!
+### don't forget to trunc output decimals to 2!
+
+Data Structure Tests
+assert that num rows in silverplans is same as appearances of "Silver" in metal col of plans.csv for some rate area
+assert that for some/any rate area, count of rates list is same as appearances in plans raw table
+assert that set of the above list is accurate
+assert that for some/any zip, count of rate areas list is same as appearances in zips raw table
+assert that the set of the above list is accurate
+
+Test length and identity of zips between input csv and final output count (overkill)
+test multiple rate areas for zip
+test zip not found in zips
+test rate_area not found in plans
+test accurate rate area for zipcode with rate (exactly one rate area in set)
+test no silver plans for rate area
+test one silver plan for rate area
+test one silver plan that appears twice for a rate area
+test count of rates for given silver plan for rate area in both list and set
+
+Is it weird to use test generators for this kind of assignment?
+
+### TODO IDEAS
+### proper error handling...
+### boilerplate stuff, black, flake8, pytest plugins, jenkins... use nose to create test generators
+### validate data quality in the first place, like do all metal_level vals conform to the four categories, etc...
+### assume underlying data will change, plan for a proper ETL pipe starting with original sources
+### reorder tests by expense and cut out early with -exitfirst? Use sampling for larger dataset
