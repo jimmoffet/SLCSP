@@ -17,6 +17,7 @@ Run tests with Docker:
 ## To run without docker
 
 Clone repo and run from root (using a virtual environment is recommended, tested with python 3.6):
+
 `pip install --no-cache-dir -r requirements.txt`
 `python run.py`
 
