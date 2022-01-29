@@ -13,12 +13,12 @@ set of target zipcodes.
 optional arguments:
   -h, --help            show this help message and exit
   -z ZIPMAP, --zipmap ZIPMAP
-                        Path to csv with mapping of zipcodes to state & rate
+                        OPTIONAL Path to csv with mapping of zipcodes to state & rate
                         area
   -p PLANS, --plans PLANS
-                        Path to csv with plan rates for each rate area
+                        OPTIONAL Path to csv with plan rates for each rate area
   -t TARGETS, --targets TARGETS
-                        Path to csv with zipcodes for which to output
+                        OPTIONAL Path to csv with zipcodes for which to output
                         benchmarks
 ```
 

@@ -5,9 +5,9 @@ parser = argparse.ArgumentParser(
     description="BenchmarkFinder calculates the second-lowest cost silver plan for each of a set of target zipcodes."
 )
 
-parser.add_argument("-z", "--zipmap", help="Path to csv with mapping of zipcodes to state & rate area")
-parser.add_argument("-p", "--plans", help="Path to csv with plan rates for each rate area")
-parser.add_argument("-t", "--targets", help="Path to csv with zipcodes for which to output benchmarks")
+parser.add_argument("-z", "--zipmap", help="OPTIONAL Path to csv with mapping of zipcodes to state & rate area")
+parser.add_argument("-p", "--plans", help="OPTIONAL Path to csv with plan rates for each rate area")
+parser.add_argument("-t", "--targets", help="OPTIONAL Path to csv with zipcodes for which to output benchmarks")
 
 args = parser.parse_args()
 
